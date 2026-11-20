@@ -1,0 +1,18 @@
+[project]
+name = "mbundo"
+version = "0.1.0"
+description = "Measurement-based uncomputation passes for Qiskit circuits"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = ["qiskit==2.5.2"]
+
+[build-system]
+requires = ["uv_build>=0.11.23,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "MBUndo"
+module-root = ""
+source-include = ["run_mbundo.py", "examples/*.qpy", "uv.lock"]
